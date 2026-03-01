@@ -1,0 +1,218 @@
+/* Custom Adjustments & New Components */
+
+/* Logos */
+.logo-link {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    height: 35px;
+    width: auto;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.1));
+}
+
+.hero-brand-logo {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto;
+    opacity: 0;
+    animation: fadeInUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    filter: drop-shadow(0 0 40px rgba(255, 255, 255, 0.1));
+}
+
+.footer-logo {
+    height: 40px;
+    width: auto;
+    margin-bottom: 0.5rem;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.1));
+}
+
+.mt-sm {
+    margin-top: 1rem;
+}
+
+/* About Section */
+.about {
+    background-color: var(--bg-secondary);
+    position: relative;
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.about-grid {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.about-text {
+    max-width: 700px;
+}
+
+.about-signature-img {
+    max-width: 200px;
+    margin: 3rem auto 0;
+    opacity: 0.6;
+}
+
+/* Modal System */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(14, 14, 14, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition-smooth);
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background: var(--bg-glass);
+    border: 1px solid var(--border-light);
+    border-radius: 4px;
+    box-shadow: var(--shadow-glass);
+    width: 90%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    transform: translateY(30px) scale(0.95);
+    transition: var(--transition-smooth);
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0) scale(1);
+}
+
+.close-modal {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 2.5rem;
+    color: var(--text-secondary);
+    line-height: 1;
+    z-index: 10;
+}
+
+.close-modal:hover {
+    color: var(--text-primary);
+    transform: rotate(90deg);
+}
+
+.modal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+}
+
+.modal-image-container {
+    background: var(--bg-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.modal-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+}
+
+.modal-details {
+    padding: 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lg {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.lg-price {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.modal-desc {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+}
+
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: #128C7E;
+    color: white;
+    border-color: #128C7E;
+    border-radius: 4px;
+    /* less sharp for WA */
+}
+
+.btn-whatsapp:hover {
+    background: #075E54;
+    border-color: #075E54;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(18, 140, 126, 0.4);
+}
+
+/* Floating WhatsApp Button */
+.floating-whatsapp {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    z-index: 1500;
+    transition: var(--transition-smooth);
+}
+
+.floating-whatsapp:hover {
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+}
+
+@media (max-width: 768px) {
+    .modal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-image-container {
+        padding: 1rem;
+    }
+
+    .modal-details {
+        padding: 2rem 1.5rem;
+    }
+
+    .hero-brand-logo {
+        max-width: 80%;
+    }
+}

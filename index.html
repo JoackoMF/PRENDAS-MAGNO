@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAGNO | Premium Streetwear</title>
+    <meta name="description"
+        content="Ropa urbana premium con inteligencia y carácter. Descubre la nueva colección de MAGNO.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/src/styles/variables.css">
+    <link rel="stylesheet" href="/src/styles/main.css">
+    <link rel="stylesheet" href="/src/styles/components/navbar.css">
+    <link rel="stylesheet" href="/src/styles/components/hero.css">
+    <link rel="stylesheet" href="/src/styles/components/featured.css">
+    <link rel="stylesheet" href="/src/styles/components/grid.css">
+    <link rel="stylesheet" href="/src/styles/components/footer.css">
+    <link rel="stylesheet" href="/src/styles/custom.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container navbar-container">
+            <a href="/" class="logo-link">
+                <img src="/images/MAGNOLOGO.png" alt="MAGNO" class="nav-logo">
+            </a>
+            <button class="hamburger" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="#featured">Colección</a>
+                <a href="#products">Shop</a>
+                <a href="#about">Filosofía</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <img src="/images/MAGNOLOGO.png" alt="MAGNO" class="hero-brand-logo">
+                <p class="hero-tagline mt-sm">No seguimos la cultura. La creamos.</p>
+                <div class="hero-actions">
+                    <a href="#featured" class="btn btn-primary">Descubrir Colección</a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span class="mouse">
+                    <span class="wheel"></span>
+                </span>
+            </div>
+        </section>
+
+        <!-- Featured / Editorial Section -->
+        <section id="featured" class="featured section-padding">
+            <div class="container">
+                <div class="featured-grid">
+                    <div class="featured-text">
+                        <h2 class="section-title">La nueva <br><span class="gold-text">Colección 01</span></h2>
+                        <p class="section-desc">Materiales premium. Cortes precisos. Una estética oscura que redefine el
+                            streetwear contemporáneo.</p>
+                        <a href="#products" class="btn btn-secondary">Ver Lookbook</a>
+                    </div>
+                    <div class="featured-image">
+                        <div class="image-placeholder" style="background-image: url('/images/featured.png')"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Grid -->
+        <section id="products" class="product-grid section-padding">
+            <div class="container">
+                <h2 class="section-title text-center mb-lg">Lanzamientos Exclusivos</h2>
+                <div class="grid-container">
+                    <!-- Product Card 1 -->
+                    <div class="product-card glass">
+                        <div class="product-img">
+                            <div class="img-placeholder" style="background-image: url('/images/product1.png')"></div>
+                            <span class="badge badge-gold">Nuevo</span>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">T-Shirt "Onyx"</h3>
+                            <p class="product-price">$85.00</p>
+                            <button class="btn btn-icon open-modal-btn" data-product="T-Shirt Onyx" data-price="$85.00"
+                                data-img="/images/product1.png" aria-label="Ver detalles">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 5v14m-7-7h14" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Product Card 2 -->
+                    <div class="product-card glass">
+                        <div class="product-img">
+                            <div class="img-placeholder" style="background-image: url('/images/product2.png')"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Hoodie "Eclipse"</h3>
+                            <p class="product-price">$120.00</p>
+                            <button class="btn btn-icon open-modal-btn" data-product="Hoodie Eclipse"
+                                data-price="$120.00" data-img="/images/product2.png" aria-label="Ver detalles">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 5v14m-7-7h14" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Product Card 3 -->
+                    <div class="product-card glass">
+                        <div class="product-img">
+                            <div class="img-placeholder" style="background-image: url('/images/product3.png')"></div>
+                            <span class="badge">Limited</span>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Jacket "Magno"</h3>
+                            <p class="product-price">$250.00</p>
+                            <button class="btn btn-icon open-modal-btn" data-product="Jacket Magno" data-price="$250.00"
+                                data-img="/images/product3.png" aria-label="Ver detalles">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 5v14m-7-7h14" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filosofia Section -->
+        <section id="about" class="about section-padding">
+            <div class="container about-content">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h2 class="section-title">El Manifiesto</h2>
+                        <p class="section-desc">MAGNO no es solo ropa. Es una postura. Diseñamos para quienes entienden
+                            que el estilo es una forma de inteligencia táctil. Nuestras prendas son armaduras urbanas:
+                            oscuras, precisas y sin compromisos.</p>
+                        <p class="section-desc">Rechazamos lo genérico. Abrazamos la profundidad.</p>
+                        <img src="/images/MAGNOLOGO.png" alt="MAGNO Sign" class="about-signature-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter section-padding">
+            <div class="container newsletter-content">
+                <h2>Acceso Anticipado</h2>
+                <p>Únete para acceso exclusivo a drops limitados y eventos privados.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault()">
+                    <input type="email" placeholder="Ingresa tu correo" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Product Modal -->
+    <div id="product-modal" class="modal-overlay">
+        <div class="modal-content glass">
+            <button class="close-modal" aria-label="Cerrar modal">&times;</button>
+            <div class="modal-grid">
+                <div class="modal-image-container">
+                    <img id="modal-img" src="" alt="Producto" class="modal-img">
+                </div>
+                <div class="modal-details">
+                    <h2 id="modal-title" class="product-title lg"></h2>
+                    <p id="modal-price" class="product-price gold-text lg-price"></p>
+                    <p class="modal-desc">Pieza de archivo de alta calidad. Diseño minimalista y corte contemporáneo.
+                        Confeccionada con materiales premium para garantizar durabilidad y confort extremo.</p>
+
+                    <div class="modal-actions">
+                        <a id="modal-whatsapp-link" href="#" target="_blank" class="btn btn-secondary btn-whatsapp">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </svg>
+                            Consultar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/541169135436?text=Hola,%20quisiera%20más%20información%20sobre%20MAGNO." target="_blank"
+        class="floating-whatsapp" aria-label="Chat WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+        </svg>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo-link">
+                    <img src="/images/MAGNOLOGO.png" alt="MAGNO" class="footer-logo">
+                </a>
+                <p class="footer-desc mt-sm">Ropa urbana premium con inteligencia y carácter. No seguimos la cultura, la
+                    creamos.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="#featured">Colección</a></li>
+                    <li><a href="#products">Archivo</a></li>
+                    <li><a href="#about">Filosofía</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Soporte</h4>
+                <ul>
+                    <li><a href="#">Envíos y Devoluciones</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Privacidad</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 MAGNO. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">IG</a>
+                <a href="#">X</a>
+                <a href="#">YT</a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

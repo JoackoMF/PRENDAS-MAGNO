@@ -1,0 +1,36 @@
+:root {
+  /* Colors */
+  --bg-primary: #0E0E0E;
+  --bg-secondary: #161616;
+  --bg-glass: rgba(30, 30, 30, 0.4);
+  
+  --gold-metallic: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+  --gold-solid: #CFB53B;
+  
+  --electric-blue: #00e5ff;
+  --electric-blue-hover: rgba(0, 229, 255, 0.15);
+  --electric-blue-border: rgba(0, 229, 255, 0.3);
+  
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  
+  --border-light: rgba(255, 255, 255, 0.08);
+  
+  /* Typography */
+  --font-primary: 'Outfit', sans-serif;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 8rem;
+  
+  /* Transitions */
+  --transition-smooth: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-fast: all 0.2s ease;
+  
+  /* Shadows */
+  --shadow-glass: 0 4px 30px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 4px 30px var(--electric-blue-hover);
+}

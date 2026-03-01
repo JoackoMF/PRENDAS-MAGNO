@@ -1,0 +1,143 @@
+/* Product Grid System (Glassmorphism) */
+.product-grid {
+    background: var(--bg-secondary);
+    position: relative;
+}
+
+.product-grid::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40%;
+    height: 40%;
+    background: radial-gradient(circle, var(--electric-blue-hover) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-lg {
+    margin-bottom: 4rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Glassmorphism Card */
+.product-card {
+    background: var(--bg-glass);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    /* Slight radius for modern feel */
+    overflow: hidden;
+    transition: var(--transition-smooth);
+    box-shadow: var(--shadow-glass);
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--electric-blue-border);
+    box-shadow: var(--shadow-glow);
+}
+
+.product-img {
+    position: relative;
+    padding-top: 100%;
+    /* 1:1 Aspect Ratio */
+    overflow: hidden;
+    background: var(--bg-primary);
+    /* Dark base before image loads */
+}
+
+.img-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.product-card:hover .img-placeholder {
+    transform: scale(1.08);
+}
+
+.badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: var(--text-primary);
+    color: var(--bg-primary);
+    border-radius: 2px;
+}
+
+.badge-gold {
+    background: var(--gold-metallic);
+    color: var(--bg-primary);
+}
+
+.product-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.product-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.product-price {
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+.btn-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+    border: 1px solid var(--border-light);
+}
+
+.product-card:hover .btn-icon {
+    background: var(--electric-blue);
+    color: var(--bg-primary);
+    border-color: var(--electric-blue);
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: minmax(250px, 1fr);
+    }
+}
