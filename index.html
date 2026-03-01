@@ -14,14 +14,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/src/styles/variables.css">
-    <link rel="stylesheet" href="/src/styles/main.css">
-    <link rel="stylesheet" href="/src/styles/components/navbar.css">
-    <link rel="stylesheet" href="/src/styles/components/hero.css">
-    <link rel="stylesheet" href="/src/styles/components/featured.css">
-    <link rel="stylesheet" href="/src/styles/components/grid.css">
-    <link rel="stylesheet" href="/src/styles/components/footer.css">
-    <link rel="stylesheet" href="/src/styles/custom.css">
+    <link rel="stylesheet" href="./src/styles/variables.css">
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <link rel="stylesheet" href="./src/styles/components/navbar.css">
+    <link rel="stylesheet" href="./src/styles/components/hero.css">
+    <link rel="stylesheet" href="./src/styles/components/featured.css">
+    <link rel="stylesheet" href="./src/styles/components/grid.css">
+    <link rel="stylesheet" href="./src/styles/components/footer.css">
+    <link rel="stylesheet" href="./src/styles/custom.css">
 </head>
 
 <body>
@@ -30,7 +30,7 @@
     <header class="navbar">
         <div class="container navbar-container">
             <a href="/" class="logo-link">
-                <img src="/images/MAGNOLOGO.png" alt="MAGNO" class="nav-logo">
+                <img src="./public/images/MAGNOLOGO.png" alt="MAGNO" class="nav-logo">
             </a>
             <button class="hamburger" aria-label="Abrir menú">
                 <span></span>
@@ -49,7 +49,7 @@
         <!-- Hero Section -->
         <section id="hero" class="hero">
             <div class="hero-content">
-                <img src="/images/MAGNOLOGO.png" alt="MAGNO" class="hero-brand-logo">
+                <img src="./public/images/MAGNOLOGO.png" alt="MAGNO" class="hero-brand-logo">
                 <p class="hero-tagline mt-sm">No seguimos la cultura. La creamos.</p>
                 <div class="hero-actions">
                     <a href="#featured" class="btn btn-primary">Descubrir Colección</a>
@@ -73,7 +73,8 @@
                         <a href="#products" class="btn btn-secondary">Ver Lookbook</a>
                     </div>
                     <div class="featured-image">
-                        <div class="image-placeholder" style="background-image: url('/images/featured.png')"></div>
+                        <div class="image-placeholder" style="background-image: url('./public/images/featured.png')">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -87,14 +88,15 @@
                     <!-- Product Card 1 -->
                     <div class="product-card glass">
                         <div class="product-img">
-                            <div class="img-placeholder" style="background-image: url('/images/product1.png')"></div>
+                            <div class="img-placeholder" style="background-image: url('./public/images/product1.png')">
+                            </div>
                             <span class="badge badge-gold">Nuevo</span>
                         </div>
                         <div class="product-info">
                             <h3 class="product-title">T-Shirt "Onyx"</h3>
                             <p class="product-price">$85.00</p>
                             <button class="btn btn-icon open-modal-btn" data-product="T-Shirt Onyx" data-price="$85.00"
-                                data-img="/images/product1.png" aria-label="Ver detalles">
+                                data-img="./public/images/product1.png" aria-label="Ver detalles">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M12 5v14m-7-7h14" />
@@ -105,13 +107,14 @@
                     <!-- Product Card 2 -->
                     <div class="product-card glass">
                         <div class="product-img">
-                            <div class="img-placeholder" style="background-image: url('/images/product2.png')"></div>
+                            <div class="img-placeholder" style="background-image: url('./public/images/product2.png')">
+                            </div>
                         </div>
                         <div class="product-info">
                             <h3 class="product-title">Hoodie "Eclipse"</h3>
                             <p class="product-price">$120.00</p>
                             <button class="btn btn-icon open-modal-btn" data-product="Hoodie Eclipse"
-                                data-price="$120.00" data-img="/images/product2.png" aria-label="Ver detalles">
+                                data-price="$120.00" data-img="./public/images/product2.png" aria-label="Ver detalles">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M12 5v14m-7-7h14" />
@@ -122,14 +125,15 @@
                     <!-- Product Card 3 -->
                     <div class="product-card glass">
                         <div class="product-img">
-                            <div class="img-placeholder" style="background-image: url('/images/product3.png')"></div>
+                            <div class="img-placeholder" style="background-image: url('./public/images/product3.png')">
+                            </div>
                             <span class="badge">Limited</span>
                         </div>
                         <div class="product-info">
                             <h3 class="product-title">Jacket "Magno"</h3>
                             <p class="product-price">$250.00</p>
                             <button class="btn btn-icon open-modal-btn" data-product="Jacket Magno" data-price="$250.00"
-                                data-img="/images/product3.png" aria-label="Ver detalles">
+                                data-img="./public/images/product3.png" aria-label="Ver detalles">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M12 5v14m-7-7h14" />
@@ -151,7 +155,7 @@
                             que el estilo es una forma de inteligencia táctil. Nuestras prendas son armaduras urbanas:
                             oscuras, precisas y sin compromisos.</p>
                         <p class="section-desc">Rechazamos lo genérico. Abrazamos la profundidad.</p>
-                        <img src="/images/MAGNOLOGO.png" alt="MAGNO Sign" class="about-signature-img">
+                        <img src="./public/images/MAGNOLOGO.png" alt="MAGNO Sign" class="about-signature-img">
                     </div>
                 </div>
             </div>
@@ -214,7 +218,7 @@
         <div class="container footer-grid">
             <div class="footer-brand">
                 <a href="#" class="logo-link">
-                    <img src="/images/MAGNOLOGO.png" alt="MAGNO" class="footer-logo">
+                    <img src="./public/images/MAGNOLOGO.png" alt="MAGNO" class="footer-logo">
                 </a>
                 <p class="footer-desc mt-sm">Ropa urbana premium con inteligencia y carácter. No seguimos la cultura, la
                     creamos.</p>
@@ -246,7 +250,7 @@
         </div>
     </footer>
 
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="./src/main.js"></script>
 </body>
 
 </html>
