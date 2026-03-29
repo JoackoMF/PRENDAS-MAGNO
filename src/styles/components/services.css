@@ -1,0 +1,333 @@
+/* ═══════════════════════════════════════════════════════════════
+   MAGNO — About Section (about.css — embedded in services area)
+   Note: about styles live here, referenced from main layout
+═══════════════════════════════════════════════════════════════ */
+
+/* ── About section (part of main layout) ────────────────────── */
+.about {
+  background: var(--color-surface);
+  position: relative;
+  overflow: hidden;
+}
+
+.about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, var(--color-gold-dim) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+/* ── Image column ────────────────────────────────────────────── */
+.about-image {
+  position: relative;
+}
+
+.about-image-inner {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(ellipse at 30% 30%, rgba(200, 169, 110, 0.12) 0%, transparent 60%),
+    linear-gradient(145deg, #1a1a14 0%, #111110 50%, #0d0d0a 100%);
+  border: 1px solid rgba(200, 169, 110, 0.2);
+  overflow: hidden;
+  box-shadow: var(--shadow-gold);
+}
+
+/* Inner content visual */
+.about-image-inner::before {
+  content: 'MAGNO';
+  position: absolute;
+  bottom: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 4rem;
+  font-weight: 700;
+  color: rgba(200, 169, 110, 0.08);
+  letter-spacing: 0.3em;
+  white-space: nowrap;
+}
+
+/* Decorative corner accent */
+.about-image-inner::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  border: 1px solid rgba(200, 169, 110, 0.1);
+  border-radius: var(--radius-md);
+  pointer-events: none;
+}
+
+.about-image-accent {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 120px;
+  height: 120px;
+  border-radius: var(--radius-lg);
+  background: var(--color-gold-dim);
+  border: 1px solid rgba(200, 169, 110, 0.3);
+  z-index: -1;
+}
+
+.about-badge {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+}
+
+/* ── Text column ─────────────────────────────────────────────── */
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.about-text .section-title {
+  margin-bottom: 0;
+}
+
+.about-text .section-desc {
+  max-width: none;
+}
+
+/* Values list */
+.about-values {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-top: var(--space-xs);
+}
+
+.about-value-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  padding: var(--space-sm);
+  border-radius: var(--radius-md);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  transition: var(--transition-base);
+}
+
+.about-value-item:hover {
+  border-color: rgba(200, 169, 110, 0.2);
+  background: var(--color-gold-dim);
+}
+
+.value-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  filter: grayscale(0);
+}
+
+.about-value-item strong {
+  display: block;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.about-value-item p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* ── Mobile ──────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .about-image {
+    max-width: 400px;
+    margin-inline: auto;
+    width: 100%;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Services Section (services.css)
+═══════════════════════════════════════════════════════════════ */
+
+.services {
+  background: var(--color-bg);
+  position: relative;
+}
+
+.services::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-border), transparent);
+}
+
+/* Services grid — JS populates this */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+/* ── Service card (populated by JS) ─────────────────────────── */
+.service-card {
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  opacity: 0;
+  transition: var(--transition-base);
+}
+
+.service-card:hover {
+  border-color: rgba(200, 169, 110, 0.3);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-gold), var(--shadow-card);
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+/* Featured highlight */
+.service-card.is-featured {
+  border-color: var(--color-gold);
+  background: linear-gradient(
+    145deg,
+    rgba(200, 169, 110, 0.05) 0%,
+    var(--color-surface) 100%
+  );
+  transform: scale(1.02);
+  box-shadow: var(--shadow-gold-strong), var(--shadow-card);
+}
+
+.service-card.is-featured::before {
+  opacity: 1;
+}
+
+.service-card.is-featured:hover {
+  transform: scale(1.02) translateY(-6px);
+}
+
+/* Card inner elements (JS will create these) */
+.card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-xs);
+}
+
+.card-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.card-name {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-top: var(--space-xs);
+}
+
+.card-price {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-gold);
+  line-height: 1;
+}
+
+.card-price span {
+  font-size: var(--font-size-sm);
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+.card-desc {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.card-features {
+  flex: 1;
+}
+
+.card-cta {
+  margin-top: auto;
+  width: 100%;
+}
+
+/* Services footer */
+.services-footer {
+  text-align: center;
+  padding-top: var(--space-md);
+}
+
+.services-custom-text {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+}
+
+.services-custom-link {
+  color: var(--color-gold);
+  font-weight: 600;
+  margin-left: 0.4rem;
+  transition: var(--transition-base);
+}
+
+.services-custom-link:hover {
+  color: var(--color-gold-light);
+}
+
+/* ── Mobile ──────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card.is-featured {
+    transform: scale(1);
+  }
+
+  .service-card.is-featured:hover {
+    transform: translateY(-6px);
+  }
+}
