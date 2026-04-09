@@ -50,3 +50,86 @@
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 
               0 0 20px rgba(200, 169, 110, 0.15) !important;
 }
+
+/* ── Overflow safety (replaces body overflow-x: hidden) ──── */
+html {
+  overflow-x: clip;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Ultra-small devices (320px and below)
+   Tighten spacing so nothing overflows or clips
+═══════════════════════════════════════════════════════════════ */
+@media (max-width: 380px) {
+
+  /* Reduce container side padding */
+  .container {
+    padding-inline: var(--space-sm);
+  }
+
+  /* Hero tag pill */
+  .hero-tag {
+    font-size: var(--font-size-xs);
+    letter-spacing: 0.08em;
+    padding: 0.3rem 0.75rem;
+  }
+
+  /* Hero stats row — stack vertically */
+  .hero-stats {
+    flex-direction: column;
+    gap: var(--space-sm);
+    padding: var(--space-sm);
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: var(--font-size-xl);
+  }
+
+  /* Step cards */
+  .step-card {
+    padding: var(--space-sm);
+  }
+
+  /* About value items */
+  .about-value-item {
+    padding: var(--space-xs);
+    gap: var(--space-xs);
+  }
+
+  .value-icon {
+    font-size: 1.2rem;
+  }
+
+  /* Section headers */
+  .section-title {
+    font-size: var(--font-size-xl);
+  }
+
+  .section-desc {
+    font-size: var(--font-size-base);
+  }
+
+  /* Floating WhatsApp — move away from edge */
+  .floating-whatsapp {
+    bottom: 1rem;
+    right: 1rem;
+    width: 50px;
+    height: 50px;
+  }
+
+  .floating-whatsapp svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* Footer */
+  .footer {
+    padding-top: var(--space-lg);
+  }
+
+  .footer-grid {
+    gap: var(--space-md);
+    padding-bottom: var(--space-lg);
+  }
+}

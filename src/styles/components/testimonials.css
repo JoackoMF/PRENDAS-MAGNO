@@ -148,4 +148,7 @@
   .testimonials-grid {
     grid-template-columns: 1fr;
   }
+  .testimonial-card {
+    padding: var(--space-sm);
+  }
 }

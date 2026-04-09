@@ -323,6 +323,10 @@
     grid-template-columns: 1fr;
   }
 
+  .service-card {
+    padding: var(--space-sm);
+  }
+
   .service-card.is-featured {
     transform: scale(1);
   }
